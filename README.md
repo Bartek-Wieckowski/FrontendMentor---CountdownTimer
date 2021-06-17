@@ -1,7 +1,7 @@
 
 # Countdown timer!
 
-![Few screenshots](/img/screen1.png)
+![screenshots](/images/screen1.png)
 
 
 ## Welcome! 👋
