@@ -98,22 +98,7 @@ img {
     //display: block;
 }
 
-/* --**CSS CLASS**-- */
-.section {
-    padding: 4rem 0 2rem;
-    &__title {
-        font-size: var(--h1-font-size);
-    }
-    &__subtitle {
-        display: block;
-        font-size: var(--small-font-size);
-        margin-bottom: var(--mb-3);
-    }
-}
-.section__title,
-.section__subtitle {
-    text-align: center;
-}
+/* --**IMG**-- */
 .hills__img {
     position: absolute;
     bottom: 0;
@@ -137,7 +122,6 @@ img {
     background-image: url(/images/bg-stars.svg);
     background-size: cover;
     background-position: center center;
-    // background-attachment: fixed;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -147,23 +131,50 @@ img {
     // border: 1px solid white;
 
     &__container {
-        border: 1px solid red;
+        // border: 1px solid red;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
+        min-height: 300px;
         padding: 0 1rem;
     }
     &__title {
         text-align: center;
+        font-size: var(--huge-font-size);
+        margin-bottom: var(--mb-5);
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
     }
     &__content {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
+
+        min-height: 100px;
     }
 }
+.count {
+    background-color: var(--square-color);
+    padding: 0 0.5rem;
+    margin-bottom: var(--mb-2);
+    &__text {
+        text-align: center;
+        font-size: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.175rem;
+    }
+    &__days,
+    &__hours,
+    &__minutes,
+    &__seconds {
+        color: var(--counter-color);
+        font-size: var(--big-font-size);
+        text-align: center;
+    }
+}
+
 /* --**SOCIALS**-- */
 .socials {
     position: absolute;
@@ -171,7 +182,19 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: var(--z-fixed);
+    grid-template-columns: repeat(3, 1fr);
+
+    &__icon {
+        color: var(--text-color);
+        font-size: var(--h1-font-size);
+        &:hover {
+            color: var(--counter-color);
+        }
+    }
 }
 
 /* --**MEDIA QUERIES**-- */
 // zmienic w hills__img height na mniejszy vh
+// w count dac wiekszy padding
+// w h1 zmiejszyc czcionke
+// count__text zmienic fontsize na small

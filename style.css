@@ -92,26 +92,7 @@ img {
   height: auto;
 }
 
-/* --**CSS CLASS**-- */
-.section {
-  padding: 4rem 0 2rem;
-}
-
-.section__title {
-  font-size: var(--h1-font-size);
-}
-
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-3);
-}
-
-.section__title,
-.section__subtitle {
-  text-align: center;
-}
-
+/* --**IMG**-- */
 .hills__img {
   position: absolute;
   bottom: 0;
@@ -144,30 +125,53 @@ img {
 
 /* --**TIMER**-- */
 .timer__container {
-  border: 1px solid red;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
+  min-height: 300px;
   padding: 0 1rem;
 }
 
 .timer__title {
   text-align: center;
+  font-size: var(--huge-font-size);
+  margin-bottom: var(--mb-5);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
 }
 
 .timer__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 100px;
+}
+
+.count {
+  background-color: var(--square-color);
+  padding: 0 0.5rem;
+  margin-bottom: var(--mb-2);
+}
+
+.count__text {
+  text-align: center;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.175rem;
+}
+
+.count__days, .count__hours, .count__minutes, .count__seconds {
+  color: var(--counter-color);
+  font-size: var(--big-font-size);
+  text-align: center;
 }
 
 /* --**SOCIALS**-- */
@@ -178,6 +182,17 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: var(--z-fixed);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.socials__icon {
+  color: var(--text-color);
+  font-size: var(--h1-font-size);
+}
+
+.socials__icon:hover {
+  color: var(--counter-color);
 }
 
 /* --**MEDIA QUERIES**-- */
