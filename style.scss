@@ -104,6 +104,7 @@ img {
     bottom: 0;
     width: 100%;
     height: 25vh;
+    z-index: -1;
 }
 
 /* --**LAYOUT**-- */
@@ -118,7 +119,7 @@ img {
 }
 .main {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(/images/bg-stars.svg);
     background-size: cover;
     background-position: center center;
@@ -137,7 +138,7 @@ img {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
-        min-height: 300px;
+        // min-height: 300px;
         padding: 0 1rem;
     }
     &__title {
@@ -151,13 +152,11 @@ img {
         display: flex;
         justify-content: space-around;
         align-items: center;
-
-        min-height: 100px;
     }
 }
 .count {
     background-color: var(--square-color);
-    padding: 0 0.3rem;
+    width: 95px;
     margin-bottom: var(--mb-2);
     &__text {
         text-align: center;
@@ -194,7 +193,40 @@ img {
 }
 
 /* --**MEDIA QUERIES**-- */
-// zmienic w hills__img height na mniejszy vh
-// w count dac wiekszy padding
-// w h1 zmiejszyc czcionke
-// count__text zmienic fontsize na small
+
+// for small/mobile devices
+@media screen and (max-width: 455px) {
+    .timer {
+        &__title {
+            margin-bottom: 0;
+        }
+        &__content {
+            flex-direction: column;
+            margin-bottom: var(--mb-6);
+        }
+        &__days,
+        &__hours,
+        &__minutes,
+        &__seconds {
+            display: grid;
+        }
+    }
+    .count__text {
+        order: -1;
+        margin-bottom: var(--mb-1);
+    }
+}
+// for medium and large device
+@media screen and (min-width: 968px) {
+    .count {
+        padding: 0 0.5rem;
+        width: 120px;
+        &__text {
+            font-size: var(--small-font-size);
+        }
+    }
+    .timer__title {
+        font-size: var(--h2-font-size);
+        margin-bottom: 6rem;
+    }
+}
