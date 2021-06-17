@@ -4,8 +4,8 @@
   --text-color: hsl(237, 18%, 59%);
   --counter-color: hsl(345, 95%, 68%);
   --title-color: hsl(0, 0%, 100%);
-  --title-color: hsl(236, 21%, 26%);
-  --square-color: hsl(235, 16%, 14%);
+  --square-color: hsl(236, 21%, 26%);
+  --square-color-alt: hsl(235, 16%, 14%);
   --body-color: hsl(234, 17%, 12%);
   --body-font: "Red Hat Text", sans-serif;
   --biggest-font-size: 3.5rem;
@@ -112,6 +112,13 @@ img {
   text-align: center;
 }
 
+.hills__img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25vh;
+}
+
 /* --**LAYOUT**-- */
 .container {
   max-width: 768px;
@@ -123,6 +130,54 @@ img {
   display: -ms-grid;
   display: grid;
   gap: 1.5rem;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/bg-stars.svg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* --**TIMER**-- */
+.timer__container {
+  border: 1px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.timer__title {
+  text-align: center;
+}
+
+.timer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* --**SOCIALS**-- */
+.socials {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: var(--z-fixed);
 }
 
 /* --**MEDIA QUERIES**-- */
