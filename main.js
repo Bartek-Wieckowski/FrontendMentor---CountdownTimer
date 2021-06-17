@@ -4,7 +4,7 @@ const countMin = document.querySelector(".count__minutes");
 const countSec = document.querySelector(".count__seconds");
 
 // Set the date we're counting down
-let countDownDate = new Date("Jul 1, 2021 15:37:25").getTime();
+let countDownDate = new Date("Jul 1, 2022 15:37:25").getTime();
 const timer = setInterval(function () {
   // Get today's date and time
   const now = new Date().getTime();
@@ -39,11 +39,12 @@ const timer = setInterval(function () {
   }
 }, 1000);
 
+// Speed up counter for see the effect
 const btnSwitch = document.querySelector(".btn");
 
 const switcher = function () {
   countDownDate = new Date();
-  countDownDate.setSeconds(countDownDate.getSeconds() + 10);
+  countDownDate.setSeconds(countDownDate.getSeconds() + 11);
 };
 
 btnSwitch.addEventListener("click", switcher);

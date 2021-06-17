@@ -156,8 +156,11 @@ img {
 
 .count {
   background-color: var(--square-color);
-  width: 95px;
+  padding: 0 0.5rem;
+  width: 105px;
   margin-bottom: var(--mb-2);
+  -webkit-box-shadow: 0px 8px 0px 0px #16151d;
+          box-shadow: 0px 8px 0px 0px #16151d;
 }
 
 .count__text {
@@ -207,8 +210,38 @@ img {
   cursor: pointer;
 }
 
+.time-elem {
+  position: relative;
+}
+
+.time-elem::before,
+.time-elem::after {
+  content: "";
+  position: absolute;
+  z-index: 6;
+  top: calc(50% - 5px);
+  background: var(--body-color);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.time-elem::before {
+  left: -5px;
+}
+
+.time-elem::after {
+  right: -5px;
+}
+
+.time-elem > p {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 /* --**MEDIA QUERIES**-- */
-@media screen and (max-width: 455px) {
+@media screen and (max-width: 596px) {
   .main {
     min-height: 125vh;
   }
@@ -239,9 +272,13 @@ img {
 }
 
 @media screen and (min-width: 968px) {
+  .container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .count {
-    padding: 0 0.5rem;
-    width: 120px;
+    width: 150px;
   }
   .count__text {
     font-size: var(--small-font-size);
@@ -249,6 +286,10 @@ img {
   .timer__title {
     font-size: var(--h2-font-size);
     margin-bottom: 6rem;
+  }
+  .time-elem::before,
+  .time-elem::after {
+    top: calc(50% - 10px);
   }
 }
 /*# sourceMappingURL=style.css.map */
