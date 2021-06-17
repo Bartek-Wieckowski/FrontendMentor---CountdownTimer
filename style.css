@@ -211,6 +211,14 @@ img {
   cursor: pointer;
 }
 
+.btn__icon:hover {
+  color: black;
+}
+
+.btn:hover {
+  background-color: rgba(173, 10, 10, 0.89);
+}
+
 /* --**Graphic element**-- */
 .circle-elem {
   position: relative;

@@ -201,6 +201,12 @@ img {
         font-size: var(--big-font-size);
         color: var(--counter-color);
         cursor: pointer;
+        &:hover {
+            color: black;
+        }
+    }
+    &:hover {
+        background-color: rgba(173, 10, 10, 0.89);
     }
 }
 
