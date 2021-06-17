@@ -31,7 +31,7 @@ const timer = setInterval(function () {
   countMin.textContent = `${minutes}`;
   countSec.textContent = `${seconds}`;
 
-  // If the count down is finished, write some text
+  // If the count down is finished, stop and message
   if (distance < 0) {
     clearInterval(timer);
     alert(`Let's get started!`);

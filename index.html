@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <!-- Boxicons CSS -->
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
   <link rel="stylesheet" href="style.css">
 
   <title>Practice with Frontend Mentor | Countdown Timer</title>
@@ -28,33 +29,35 @@
 
 <body>
   <main class="main">
+    <!-- TIMER -->
     <section class="timer">
       <div class="timer__container container grid">
+
         <h1 class="timer__title">We're launching soon</h1>
         <article class="timer__content">
 
-          <div class="timer__days time-elem">
+          <div class="timer__days circle-elem">
             <div class="count__days count">
               --
             </div>
             <p class="count__text">Days</p>
           </div>
 
-          <div class="timer__hours time-elem">
+          <div class="timer__hours circle-elem">
             <div class="count__hours count">
               --
             </div>
             <p class="count__text">Hours</p>
           </div>
 
-          <div class="timer__minutes time-elem">
+          <div class="timer__minutes circle-elem">
             <div class="count__minutes count">
               --
             </div>
             <p class="count__text">Minutes</p>
           </div>
 
-          <div class="timer__seconds time-elem">
+          <div class="timer__seconds circle-elem">
             <div class="count__seconds count">
               --
             </div>
@@ -64,7 +67,7 @@
         </article>
 
       </div>
-
+      <!-- SOCIALS -->
       <article class="socials grid">
         <a href="#" class="socials__link"><i class='bx bxl-facebook-square socials__icon'></i></a>
         <a href="#" class="socials__link"><i class='bx bxl-pinterest socials__icon'></i></a>
@@ -74,13 +77,12 @@
 
     </section>
   </main>
-  <div id="flipdown" class="flipdown"></div>
 
+  <!-- FOOTER -->
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">theBart</a>.
   </div>
-  <script src="flipdown.js"></script>
   <script src="main.js"></script>
 </body>
 

@@ -154,6 +154,7 @@ img {
           align-items: center;
 }
 
+/* --**Count data**-- */
 .count {
   background-color: var(--square-color);
   padding: 0 0.5rem;
@@ -210,31 +211,32 @@ img {
   cursor: pointer;
 }
 
-.time-elem {
+/* --**Graphic element**-- */
+.circle-elem {
   position: relative;
 }
 
-.time-elem::before,
-.time-elem::after {
+.circle-elem::before,
+.circle-elem::after {
   content: "";
   position: absolute;
   z-index: 6;
-  top: calc(50% - 5px);
+  top: calc(50% - 10px);
   background: var(--body-color);
   border-radius: 50%;
   width: 10px;
   height: 10px;
 }
 
-.time-elem::before {
+.circle-elem::before {
   left: -5px;
 }
 
-.time-elem::after {
+.circle-elem::after {
   right: -5px;
 }
 
-.time-elem > p {
+.circle-elem > p {
   position: absolute;
   left: 0;
   right: 0;
@@ -287,9 +289,10 @@ img {
     font-size: var(--h2-font-size);
     margin-bottom: 6rem;
   }
-  .time-elem::before,
-  .time-elem::after {
-    top: calc(50% - 10px);
+  .circle-elem::before,
+  .circle-elem::after {
+    width: 12px;
+    height: 12px;
   }
 }
 /*# sourceMappingURL=style.css.map */
