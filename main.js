@@ -4,7 +4,7 @@ const countMin = document.querySelector(".count__minutes");
 const countSec = document.querySelector(".count__seconds");
 
 // Set the date we're counting down
-const countDownDate = new Date("Jul 1, 2021 15:37:25").getTime();
+let countDownDate = new Date("Jul 1, 2021 15:37:25").getTime();
 const timer = setInterval(function () {
   // Get today's date and time
   const now = new Date().getTime();
@@ -34,7 +34,16 @@ const timer = setInterval(function () {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(timer);
-    alert(`It's time!`);
+    alert(`Let's get started!`);
     document.body.style.opacity = 0;
   }
 }, 1000);
+
+const btnSwitch = document.querySelector(".btn");
+
+const switcher = function () {
+  countDownDate = new Date();
+  countDownDate.setSeconds(countDownDate.getSeconds() + 10);
+};
+
+btnSwitch.addEventListener("click", switcher);

@@ -191,13 +191,28 @@ img {
         }
     }
 }
+/* --**BUTTON**-- */
+.btn {
+    background-color: var(--square-color);
+    cursor: pointer;
+    border-radius: 1rem;
+    &__icon {
+        font-size: var(--big-font-size);
+        color: var(--counter-color);
+        cursor: pointer;
+    }
+}
 
 /* --**MEDIA QUERIES**-- */
 
 // for small/mobile devices
 @media screen and (max-width: 455px) {
+    .main {
+        min-height: 125vh;
+    }
     .timer {
         &__title {
+            margin-top: var(--mb-5);
             margin-bottom: 0;
         }
         &__content {
@@ -214,6 +229,9 @@ img {
     .count__text {
         order: -1;
         margin-bottom: var(--mb-1);
+    }
+    .btn {
+        margin-bottom: var(--mb-5);
     }
 }
 // for medium and large device

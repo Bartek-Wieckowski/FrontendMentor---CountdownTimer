@@ -194,9 +194,26 @@ img {
   color: var(--counter-color);
 }
 
+/* --**BUTTON**-- */
+.btn {
+  background-color: var(--square-color);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.btn__icon {
+  font-size: var(--big-font-size);
+  color: var(--counter-color);
+  cursor: pointer;
+}
+
 /* --**MEDIA QUERIES**-- */
 @media screen and (max-width: 455px) {
+  .main {
+    min-height: 125vh;
+  }
   .timer__title {
+    margin-top: var(--mb-5);
     margin-bottom: 0;
   }
   .timer__content {
@@ -215,6 +232,9 @@ img {
         -ms-flex-order: -1;
             order: -1;
     margin-bottom: var(--mb-1);
+  }
+  .btn {
+    margin-bottom: var(--mb-5);
   }
 }
 
